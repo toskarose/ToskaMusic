@@ -1,5 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap');
 
+/* ========================================
+   TOSKAROSE — FONT SYSTEM
+   ======================================== */
+
+:root {
+  --font-interface: bd-terminal-vf, sans-serif;
+  --font-digital: digibop, sans-serif;
+  --font-statement: fayte-pixel-hard, sans-serif;
+  --font-coral: coral-pixels, sans-serif;
+  --font-glitch: scatterplot-vf, sans-serif;
+  --font-editorial: ilai-bottom, sans-serif;
+}
+
+/* Main website/interface */
+body {
+  font-family: var(--font-interface);
+}
+
+/* Main navigation + system text */
+.nav,
+.navigation,
+.interface,
+.label,
+.metadata,
+.track-number {
+  font-family: var(--font-interface);
+  font-variation-settings: "wdth" 100, "wght" 400;
+}
+
+/* Playful digital text */
+.digital,
+.sticker-text,
+.pixel-accent {
+  font-family: var(--font-digital);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Weird statement/display text */
+.statement,
+.fayte,
+.section-display {
+  font-family: var(--font-statement);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Experimental accents */
+.coral-accent {
+  font-family: var(--font-coral);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glitch-text {
+  font-family: var(--font-glitch);
+}
+
+.editorial-text {
+  font-family: var(--font-editorial);
+  font-style: normal;
+  font-weight: 300;
+}
     :root {
       --bg: #050605;
       --bg-soft: #0b100c;
