@@ -1,1 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap');
 
+    :root {
+      --bg: #050605;
+      --bg-soft: #0b100c;
+
+      --text: #eee9df;
+      --muted: #777c76;
+      --line: rgba(238, 233, 223, 0.14);
+
+      --acid: #b8ff39;
+      --blue: #392cff;
+      --electric-blue: #1d8cff;
+      --red: #9f1239;
+      --green: #173b22;
+      --pink: #f2b8d8;
+
+      --card: rgba(14, 18, 15, 0.72);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(23, 59, 34, 0.45),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 85% 35%,
+          rgba(29, 140, 255, 0.12),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 50% 85%,
+          rgba(159, 18, 57, 0.12),
+          transparent 30%
+        ),
+        var(--bg);
+
+      color: var(--text);
+      font-family: "Manrope", sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* subtle grain */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.055;
+      z-index: 100;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+      mix-blend-mode: screen;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .mono {
+      font-family: "DM Mono", monospace;
+    }
+
+    /* -------------------------
+       NAV
+    ------------------------- */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 50;
+      mix-blend-mode: difference;
+    }
+
+    .nav-logo {
+      font-family: "DM Mono", monospace;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+    }
+
+    .nav-status {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: var(--acid);
+    }
+
+    /* -------------------------
+       HERO
+    ------------------------- */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 7vw 70px;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          ellipse at 70% 35%,
+          rgba(29, 140, 255, 0.13),
+          transparent 25%
+        ),
+        radial-gradient(
+          ellipse at 25% 65%,
+          rgba(23, 59, 34, 0.55),
+          transparent 35%
+        );
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 55vw;
+      height: 55vw;
+      top: -15vw;
+      right: -10vw;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(184, 255, 57, 0.08),
+          rgba(29, 140, 255, 0.05) 35%,
+          transparent 70%
+        );
+
+      filter: blur(45px);
+      animation: dreamFloat 12s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes dreamFloat {
+      from {
+        transform: translate3d(-20px, 10px, 0) scale(0.95);
+      }
+
+      to {
+        transform: translate3d(30px, -25px, 0) scale(1.08);
+      }
+    }
+
+    .hero-small {
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--acid);
+      margin-bottom: 25px;
+      opacity: 0;
+      animation: reveal 1s ease forwards 0.2s;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 14vw, 12rem);
+      line-height: 0.78;
+      letter-spacing: -0.085em;
+      font-weight: 600;
+      max-width: 1100px;
+
+      position: relative;
+      z-index: 2;
+
+      text-shadow:
+        0 0 35px rgba(238, 233, 223, 0.05);
+
+      opacity: 0;
+      animation: reveal 1s ease forwards 0.35s;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero h1 .outline {
+      color: transparent;
+
+      -webkit-text-stroke: 1px rgba(238, 233, 223, 0.75);
+
+      text-shadow:
+        4px 0 rgba(29, 140, 255, 0.25),
+        -4px 0 rgba(159, 18, 57, 0.2);
+
+      animation: glitchColor 7s infinite;
+    }
+
+    @keyframes glitchColor {
+      0%,
+      85%,
+      100% {
+        text-shadow:
+          4px 0 rgba(29, 140, 255, 0.25),
+          -4px 0 rgba(159, 18, 57, 0.2);
+      }
+
+      88% {
+        text-shadow:
+          -7px 0 rgba(29, 140, 255, 0.5),
+          7px 0 rgba(184, 255, 57, 0.35);
+      }
+
+      91% {
+        text-shadow:
+          5px 0 rgba(159, 18, 57, 0.5),
+          -5px 0 rgba(29, 140, 255, 0.45);
+      }
+    }
+
+    .hero-bottom {
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+      max-width: 1000px;
+      opacity: 0;
+      animation: reveal 1s ease forwards 0.65s;
+    }
+
+    .hero-description {
+      max-width: 430px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #b5b5b5;
+    }
+
+    .enter-button {
+      border: 1px solid var(--text);
+      padding: 17px 25px;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      transition: 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .enter-button:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      right: 7vw;
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      writing-mode: vertical-rl;
+    }
+
+    /* -------------------------
+       SECTIONS
+    ------------------------- */
+
+    section {
+      padding: 140px 7vw;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      color: var(--acid);
+      letter-spacing: 0.18em;
+      margin-bottom: 45px;
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      max-width: 900px;
+      font-weight: 500;
+    }
+
+    /* -------------------------
+       SOUND
+    ------------------------- */
+
+    .sound-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 80px;
+      align-items: start;
+    }
+
+    .sound-copy {
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      line-height: 1.65;
+      color: #c7c7c7;
+    }
+
+    .genres {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .genre {
+      border: 1px solid rgba(184, 255, 57, 0.22);
+      border-radius: 0;
+      padding: 13px 18px;
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: #bfc6bb;
+      background: rgba(184, 255, 57, 0.025);
+      transform: rotate(0deg);
+      transition:
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .genre:hover {
+      border-color: var(--acid);
+      color: var(--acid);
+      transform: translateY(-4px) rotate(-1deg);
+      box-shadow:
+        0 0 25px rgba(184, 255, 57, 0.08);
+    }
+
+    /* -------------------------
+       REFERENCES
+    ------------------------- */
+
+    .references {
+      margin-top: 70px;
+      border-top: 1px solid var(--line);
+    }
+
+    .track {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      align-items: center;
+      gap: 25px;
+      padding: 28px 8px;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      transition:
+        padding 0.35s ease,
+        background 0.35s ease;
+    }
+
+    .track:hover {
+      padding-left: 25px;
+      padding-right: 25px;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(23, 59, 34, 0.18),
+          rgba(29, 140, 255, 0.05),
+          transparent
+        );
+    }
+
+    .track-number {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      color: #555;
+    }
+
+    .track-name {
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      font-weight: 400;
+    }
+
+    .track-artist {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 5px;
+      font-family: "DM Mono", monospace;
+    }
+
+    .listen {
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      color: var(--acid);
+      border: 1px solid rgba(184, 255, 57, 0.25);
+      padding: 10px 14px;
+      transition: 0.3s ease;
+    }
+
+    .listen:hover {
+      border-color: var(--acid);
+      background: var(--acid);
+      color: #050605;
+      box-shadow:
+        0 0 25px rgba(184, 255, 57, 0.15);
+    }
+
+    /* -------------------------
+       VISION
+    ------------------------- */
+
+    .vision {
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(159, 18, 57, 0.12),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 20% 80%,
+          rgba(23, 59, 34, 0.25),
+          transparent 35%
+        ),
+        #070807;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vision-text {
+      max-width: 850px;
+      margin-top: 70px;
+      font-size: clamp(1.5rem, 3vw, 2.7rem);
+      line-height: 1.5;
+      letter-spacing: -0.025em;
+    }
+
+    .highlight {
+      color: var(--pink);
+      text-shadow:
+        0 0 25px rgba(242, 184, 216, 0.15);
+    }
+
+    /* -------------------------
+       COLLAB
+    ------------------------- */
+
+    .collab-grid {
+      margin-top: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .collab-card {
+      border: 1px solid var(--line);
+      padding: 40px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s ease;
+    }
+
+    .collab-card:hover {
+      border-color: #555;
+      transform: translateY(-5px);
+    }
+
+    .collab-card h3 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .collab-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+      max-width: 450px;
+    }
+
+    /* -------------------------
+       CONTACT
+    ------------------------- */
+
+    .contact {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        radial-gradient(
+          circle at 70% 60%,
+          rgba(29, 140, 255, 0.08),
+          transparent 30%
+        ),
+        var(--bg);
+    }
+
+    .contact-title {
+      font-size: clamp(4rem, 12vw, 11rem);
+      line-height: 0.8;
+      letter-spacing: -0.075em;
+      margin-bottom: 80px;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      border: 1px solid #444;
+      padding: 17px 25px;
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      transition: 0.3s ease;
+    }
+
+   .contact-link:hover {
+  background: var(--acid);
+  color: #000;
+  border-color: var(--acid);
+}
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 7vw;
+      display: flex;
+      justify-content: space-between;
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      color: #555;
+      letter-spacing: 0.1em;
+    }
+
+    /* -------------------------
+       ANIMATION
+    ------------------------- */
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* -------------------------
+       MOBILE
+    ------------------------- */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 20px 5vw;
+      }
+
+      .nav-status {
+        display: none;
+      }
+
+      .hero {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+
+      .hero h1 {
+        font-size: clamp(4rem, 20vw, 8rem);
+      }
+
+      .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 55px;
+      }
+
+      .scroll-indicator {
+        display: none;
+      }
+
+      section {
+        padding: 100px 5vw;
+      }
+
+      .sound-grid,
+      .collab-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .track {
+        grid-template-columns: 35px 1fr;
+        gap: 12px;
+      }
+
+      .listen {
+        grid-column: 2;
+        justify-self: start;
+      }
+
+      .collab-card {
+        min-height: 220px;
+        padding: 30px;
+      }
+
+      .contact-title {
+        font-size: 22vw;
+      }
+
+      footer {
+        padding: 20px 5vw;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
