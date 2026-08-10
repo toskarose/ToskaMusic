@@ -1,58 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>TOSKAROSE — Producer Wanted</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="style.css">
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/jhs2zbp.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/iut8vgs.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/txk8pdt.css" />
 </head>
-
 
 <body>
 
-  <!-- =========================
-       NAV
-  ========================= -->
+  <!-- CURSOR -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring">
+    <span class="cursor-text">EXPLORE</span>
+  </div>
 
+  <!-- NAV -->
   <nav>
-
-    <a href="#" class="nav-logo">
-      TOSKAROSE
-    </a>
+    <a href="#" class="nav-logo interactive">TOSKAROSE</a>
 
     <div class="nav-status">
       PRODUCER WANTED
     </div>
-
   </nav>
 
-
-  <!-- =========================
-       HERO
-  ========================= -->
-
+  <!-- HERO -->
   <section class="hero">
+
+    <div class="hero-orb orb-one"></div>
+    <div class="hero-orb orb-two"></div>
 
     <div class="hero-small">
       Open creative collaboration
     </div>
 
-    <h1>
+    <h1 class="hero-title">
       <span>TOSKA</span>
       <span class="outline">ROSE</span>
     </h1>
@@ -64,7 +51,7 @@
         experimental, emotional, unconventional and completely our own.
       </p>
 
-      <a href="#sound" class="enter-button">
+      <a href="#sound" class="enter-button interactive">
         ENTER FOLIO ↓
       </a>
 
@@ -76,11 +63,7 @@
 
   </section>
 
-
-  <!-- =========================
-       THE SOUND
-  ========================= -->
-
+  <!-- SOUND -->
   <section id="sound">
 
     <div class="section-label">
@@ -89,8 +72,8 @@
 
     <h2 class="section-title">
       Genre is a starting point.
-      <br>
-      Not a boundary.
+      <br />
+      <span class="fayte-accent">Not a boundary.</span>
     </h2>
 
     <div class="sound-grid">
@@ -103,11 +86,11 @@
 
       <div class="genres">
 
-        <span class="genre">ALTERNATIVE</span>
-        <span class="genre">ELECTRONIC</span>
-        <span class="genre">R&amp;B / SOUL</span>
-        <span class="genre">EXPERIMENTAL</span>
-        <span class="genre">JAZZ</span>
+        <span class="genre interactive">ALTERNATIVE</span>
+        <span class="genre interactive">ELECTRONIC</span>
+        <span class="genre interactive">R&amp;B / SOUL</span>
+        <span class="genre interactive">EXPERIMENTAL</span>
+        <span class="genre interactive">JAZZ</span>
 
       </div>
 
@@ -115,11 +98,7 @@
 
   </section>
 
-
-  <!-- =========================
-       SONIC REFERENCES
-  ========================= -->
-
+  <!-- REFERENCES -->
   <section id="references">
 
     <div class="section-label">
@@ -128,40 +107,27 @@
 
     <h2 class="section-title">
       A few places
-      <br>
-      to start.
+      <br />
+      <span class="fayte-accent">to start.</span>
     </h2>
 
-
     <!-- PLAYER -->
-
     <div class="reference-player">
 
       <div class="player-top">
-
-        <span class="player-label mono">
+        <span class="player-label">
           SONIC REFERENCE
         </span>
 
-        <span
-          class="player-status mono"
-          id="player-status"
-        >
+        <span class="player-status" id="player-status">
           SELECT A TRACK
         </span>
-
       </div>
-
 
       <div class="player-screen">
 
-        <div
-          class="player-placeholder"
-          id="player-placeholder"
-        >
-          <span>
-            SELECT A REFERENCE BELOW
-          </span>
+        <div class="player-placeholder" id="player-placeholder">
+          <span>SELECT A REFERENCE BELOW</span>
         </div>
 
         <iframe
@@ -169,370 +135,180 @@
           title="TOSKAROSE Sonic Reference Player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen>
+        </iframe>
 
       </div>
 
     </div>
 
+    <!-- TRACKS -->
+    <div class="references-list">
 
-    <!-- REFERENCE LIST -->
-
-    <div class="references">
-
-
-      <!-- 01 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="yyjUmv1gJEg"
-        data-title="Wii Shop Channel"
-        data-artist="REFERENCE"
-      >
+        data-title="Wii Shop Channel">
 
         <span class="track-number">01</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            Wii Shop Channel
-          </div>
-
-          <div class="track-artist">
-            REFERENCE
-          </div>
-
+          <div class="track-name">Wii Shop Channel</div>
+          <div class="track-artist">REFERENCE</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 02 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="axsD7jMteCE"
-        data-title="Lights On"
-        data-artist="FKA TWIGS"
-      >
+        data-title="Lights On">
 
         <span class="track-number">02</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            Lights On
-          </div>
-
-          <div class="track-artist">
-            FKA TWIGS
-          </div>
-
+          <div class="track-name">Lights On</div>
+          <div class="track-artist">FKA TWIGS</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 03 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="95ggJqzLcfs"
-        data-title="Eye Without a Face"
-        data-artist="SINNERELLA"
-      >
+        data-title="Eye Without a Face">
 
         <span class="track-number">03</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            Eye Without a Face
-          </div>
-
-          <div class="track-artist">
-            SINNERELLA
-          </div>
-
+          <div class="track-name">Eye Without a Face</div>
+          <div class="track-artist">SINNERELLA</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 04 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="p2ZgMw616u0"
-        data-title="Novacaine"
-        data-artist="SHILOH DYNASTY"
-      >
+        data-title="Novacaine">
 
         <span class="track-number">04</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            Novacaine
-          </div>
-
-          <div class="track-artist">
-            SHILOH DYNASTY
-          </div>
-
+          <div class="track-name">Novacaine</div>
+          <div class="track-artist">SHILOH DYNASTY</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 05 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="BxUfnnWPD0Q"
-        data-title="In The Darkened"
-        data-artist="CLARA LA SAN"
-      >
+        data-title="In The Darkened">
 
         <span class="track-number">05</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            In The Darkened
-          </div>
-
-          <div class="track-artist">
-            CLARA LA SAN
-          </div>
-
+          <div class="track-name">In The Darkened</div>
+          <div class="track-artist">CLARA LA SAN</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 06 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="AhaISeg6zpE"
-        data-title="Gotta Leave"
-        data-artist="702"
-      >
+        data-title="Gotta Leave">
 
         <span class="track-number">06</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            Gotta Leave
-          </div>
-
-          <div class="track-artist">
-            702
-          </div>
-
+          <div class="track-name">Gotta Leave</div>
+          <div class="track-artist">702</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 07 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="ANBwTyObmjY"
-        data-title="Things In My Room"
-        data-artist="JULIA WOLF"
-      >
+        data-title="Things In My Room">
 
         <span class="track-number">07</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            Things In My Room
-          </div>
-
-          <div class="track-artist">
-            JULIA WOLF
-          </div>
-
+          <div class="track-name">Things In My Room</div>
+          <div class="track-artist">JULIA WOLF</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 08 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="aals3JbR0Rc"
-        data-title="Girl Ultra"
-        data-artist="REFERENCE"
-      >
+        data-title="Girl Ultra">
 
         <span class="track-number">08</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            Girl Ultra
-          </div>
-
-          <div class="track-artist">
-            REFERENCE
-          </div>
-
+          <div class="track-name">Girl Ultra</div>
+          <div class="track-artist">REFERENCE</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 09 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="eu0KsZ_MVBc"
-        data-title="Untitled Reference"
-        data-artist="REFERENCE"
-      >
+        data-title="Untitled Reference">
 
         <span class="track-number">09</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            Untitled Reference
-          </div>
-
-          <div class="track-artist">
-            REFERENCE
-          </div>
-
+          <div class="track-name">Untitled Reference</div>
+          <div class="track-artist">REFERENCE</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 10 -->
-
-      <button
-        class="track"
-        type="button"
-        data-video="n5rS9vNbCDg"
-        data-title="No Sleep"
-        data-artist="THE BOOTLEG BOY"
-      >
+      <button class="track interactive"
+        data-video="EvgYIXc4JDA"
+        data-title="No Sleep">
 
         <span class="track-number">10</span>
 
         <div class="track-info">
-
-          <div class="track-name">
-            No Sleep
-          </div>
-
-          <div class="track-artist">
-            THE BOOTLEG BOY
-          </div>
-
+          <div class="track-name">No Sleep</div>
+          <div class="track-artist">THE BOOTLEG BOY</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
 
-
-      <!-- 11 -->
-
-      <button
-        class="track"
-        type="button"
+      <button class="track interactive"
         data-video="f-H9bbi0Vyw"
-        data-title="Scott Pilgrim Vs. The World - Black Sheep [4K]"
-        data-artist="REFERENCE"
-      >
+        data-title="Scott Pilgrim Vs. The World - Black Sheep">
 
         <span class="track-number">11</span>
 
         <div class="track-info">
-
           <div class="track-name">
-            Scott Pilgrim Vs. The World - Black Sheep [4K]
+            Scott Pilgrim Vs. The World - Black Sheep
           </div>
-
-          <div class="track-artist">
-            REFERENCE
-          </div>
-
+          <div class="track-artist">REFERENCE</div>
         </div>
 
-        <span class="listen">
-          PLAY ↗
-        </span>
-
+        <span class="listen">PLAY ↗</span>
       </button>
-
 
     </div>
 
   </section>
 
-
-  <!-- =========================
-       THE VISION
-  ========================= -->
-
+  <!-- VISION -->
   <section class="vision">
+
+    <div class="vision-glow"></div>
 
     <div class="section-label">
       03 / THE VISION
@@ -540,32 +316,26 @@
 
     <h2 class="section-title">
       I don't want
-      <br>
-      predictable.
+      <br />
+      <span class="fayte-accent">predictable.</span>
     </h2>
 
     <p class="vision-text">
-
       I'm looking for a producer who is open to
       <span class="highlight">experimentation</span>,
       unconventional sounds, interesting textures,
       atmosphere, soulful elements and electronic influence.
 
-      <br><br>
+      <br /><br />
 
       I want room to take risks, follow strange ideas,
       and build songs that feel like they exist in
       <span class="highlight">their own world.</span>
-
     </p>
 
   </section>
 
-
-  <!-- =========================
-       COLLABORATION
-  ========================= -->
-
+  <!-- COLLAB -->
   <section>
 
     <div class="section-label">
@@ -574,75 +344,62 @@
 
     <h2 class="section-title">
       Bring your
-      <br>
-      weird ideas.
+      <br />
+      <span class="fayte-accent">weird ideas.</span>
     </h2>
 
     <div class="collab-grid">
 
-      <div class="collab-card">
-
-        <h3>
-          What I'm bringing
-        </h3>
+      <div class="collab-card interactive">
+        <h3>What I'm bringing</h3>
 
         <p>
           Vocals, ideas, concepts, references, melodies,
           visual direction and a willingness to experiment.
         </p>
-
       </div>
 
-
-      <div class="collab-card">
-
-        <h3>
-          What I'm looking for
-        </h3>
+      <div class="collab-card interactive">
+        <h3>What I'm looking for</h3>
 
         <p>
           A producer who wants to build collaboratively,
           experiment with sound and help create something
           that doesn't fit neatly into one box.
         </p>
-
       </div>
 
     </div>
 
   </section>
 
-
-  <!-- =========================
-       CONTACT
-  ========================= -->
-
+  <!-- CONTACT -->
   <section class="contact">
+
+    <div class="contact-glow"></div>
 
     <div class="section-label">
       05 / LET'S CREATE
     </div>
 
     <h2 class="contact-title">
-      MAKE<br>
-      SOMETHING.
+      MAKE<br />
+      <span>SOMETHING.</span>
     </h2>
 
     <div class="contact-links">
 
       <a
-        class="contact-link"
-        href="mailto:toskarose333@gmail.com"
-      >
+        class="contact-link interactive"
+        href="mailto:toskarose333@gmail.com">
         EMAIL ↗
       </a>
 
       <a
-        class="contact-link"
+        class="contact-link interactive"
         href="https://linktr.ee/toskarose"
         target="_blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         LINKTREE ↗
       </a>
 
@@ -650,29 +407,22 @@
 
   </section>
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
+  <!-- FOOTER -->
   <footer>
 
-    <span>
-      © 2026 TOSKAROSE
-    </span>
+    <span>© 2026 TOSKAROSE</span>
 
-    <span class="mono">
+    <span class="footer-right">
       PRODUCER WANTED
     </span>
 
   </footer>
 
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
-
   <script>
+
+    /* =========================
+       YOUTUBE PLAYER
+    ========================= */
 
     const player =
       document.getElementById("youtube-player");
@@ -686,7 +436,6 @@
     const tracks =
       document.querySelectorAll(".track");
 
-
     tracks.forEach((track) => {
 
       track.addEventListener("click", () => {
@@ -697,32 +446,23 @@
         const title =
           track.dataset.title;
 
-
-        if (!videoId) {
-          return;
-        }
-
+        if (!videoId) return;
 
         player.src =
           `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
-
 
         placeholder.classList.add("hidden");
 
         player.classList.add("visible");
 
-
         playerStatus.textContent =
           `NOW PLAYING — ${title}`;
-
 
         tracks.forEach((item) => {
           item.classList.remove("active");
         });
 
-
         track.classList.add("active");
-
 
         document
           .querySelector(".reference-player")
@@ -735,8 +475,91 @@
 
     });
 
+
+    /* =========================
+       CUSTOM CURSOR
+    ========================= */
+
+    const cursorDot =
+      document.querySelector(".cursor-dot");
+
+    const cursorRing =
+      document.querySelector(".cursor-ring");
+
+    const cursorText =
+      document.querySelector(".cursor-text");
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+
+    let ringX = mouseX;
+    let ringY = mouseY;
+
+    document.addEventListener("mousemove", (event) => {
+
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+
+      cursorDot.style.left = `${mouseX}px`;
+      cursorDot.style.top = `${mouseY}px`;
+
+    });
+
+
+    function animateCursor() {
+
+      ringX += (mouseX - ringX) * 0.12;
+      ringY += (mouseY - ringY) * 0.12;
+
+      cursorRing.style.left = `${ringX}px`;
+      cursorRing.style.top = `${ringY}px`;
+
+      requestAnimationFrame(animateCursor);
+
+    }
+
+    animateCursor();
+
+
+    const interactiveElements =
+      document.querySelectorAll(".interactive");
+
+    interactiveElements.forEach((element) => {
+
+      element.addEventListener("mouseenter", () => {
+
+        cursorRing.classList.add("hover");
+
+        if (element.classList.contains("track")) {
+          cursorText.textContent = "PLAY";
+        } else {
+          cursorText.textContent = "OPEN";
+        }
+
+      });
+
+
+      element.addEventListener("mouseleave", () => {
+
+        cursorRing.classList.remove("hover");
+
+        cursorText.textContent = "EXPLORE";
+
+      });
+
+    });
+
+
+    /* Hide custom cursor on touch devices */
+
+    if ("ontouchstart" in window) {
+
+      cursorDot.style.display = "none";
+      cursorRing.style.display = "none";
+
+    }
+
   </script>
 
 </body>
-
 </html>
