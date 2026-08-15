@@ -1,1286 +1,734 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap");
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <title>TOSKAROSE — Producer Wanted</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
 
-:root {
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
 
-  --bg: #050605;
-  --bg-soft: #0b100c;
+  <div class="forest forest-pink" aria-hidden="true"></div>
+  <div class="forest forest-blue" aria-hidden="true"></div>
+  <div class="forest-vignette" aria-hidden="true"></div>
 
-  --text: #eee9df;
-  --muted: #777c76;
 
-  --line: rgba(238, 233, 223, 0.14);
+  <!-- ================================
+       HEADER
+  ================================= -->
 
-  --acid: #b8ff39;
+  <header class="nav">
 
-  --blue: #392cff;
-  --electric-blue: #1d8cff;
+    <a
+      class="wordmark rose-wordmark"
+      href="#top"
+      aria-label="TOSKAROSE">
 
-  --red: #9f1239;
+      <span>T</span>
+      <span>O</span>
+      <span>S</span>
+      <span>K</span>
+      <span>A</span>
+      <span>R</span>
+      <span>O</span>
+      <span>S</span>
+      <span>E</span>
 
-  --green: #173b22;
+    </a>
 
-  --pink: #f2b8d8;
+    <span class="nav-status">
+      PRODUCER WANTED
+    </span>
 
-}
+    <button
+      class="sound-toggle"
+      type="button"
+      aria-label="Toggle interface sound">
 
+      SOUND <span>ON</span>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    </button>
 
+  </header>
 
-html {
-  scroll-behavior: smooth;
-}
 
+  <!-- ================================
+       MAIN FOLIO
+  ================================= -->
 
-body {
+  <main id="top">
 
-  background:
 
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(23, 59, 34, 0.45),
-      transparent 32%
-    ),
+    <!-- HERO -->
 
-    radial-gradient(
-      circle at 85% 35%,
-      rgba(29, 140, 255, 0.12),
-      transparent 25%
-    ),
+    <section class="hero">
 
-    radial-gradient(
-      circle at 50% 85%,
-      rgba(159, 18, 57, 0.12),
-      transparent 30%
-    ),
+      <div class="hero-copy">
 
-    #050605;
+        <p class="eyebrow">
+          01 / OPEN CREATIVE COLLABORATION
+        </p>
 
-  color: var(--text);
+        <h1>
+          Enter<br>
+          <em>the forest.</em>
+        </h1>
 
-  font-family: "Manrope", sans-serif;
+        <p class="hero-sub">
+          Music, visual worlds &amp; strange little things.
+        </p>
 
-  overflow-x: hidden;
+        <button
+          class="enter-btn"
+          type="button"
+          id="enterBtn">
 
-  cursor: none;
+          <span>ENTER FOLIO</span>
+          <span class="enter-arrow">↘</span>
 
-}
+        </button>
 
+      </div>
 
-/* -------------------------
-   CUSTOM CURSOR
-------------------------- */
 
-.cursor {
+      <div
+        class="moth-wrap"
+        aria-hidden="true">
 
-  position: fixed;
+        <img
+          src="assets/moth.png"
+          alt="">
 
-  top: 0;
-  left: 0;
+      </div>
 
-  width: 28px;
-  height: 28px;
 
-  border: 1px solid var(--acid);
+      <div class="scroll-note">
+        SCROLL TO DISCOVER
+        <span>↓</span>
+      </div>
 
-  border-radius: 50%;
+    </section>
 
-  pointer-events: none;
 
-  z-index: 9999;
+    <!-- INTRO -->
 
-  transform: translate(-50%, -50%);
+    <section class="intro panel">
 
-  transition:
-    width 0.25s ease,
-    height 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
+      <div class="section-label">
+        TOSKAROSE / ARCHIVE
+      </div>
 
-  mix-blend-mode: difference;
+      <div>
 
-}
+        <p class="big-copy">
+          A living archive of sound, references,
+          experiments and collaborative ideas.
+        </p>
 
+        <p class="small-copy">
+          Start with the newest work. Move backward
+          through the years. Click a piece to reveal
+          its name and year, then press play to listen.
+        </p>
 
-.cursor-dot {
+      </div>
 
-  position: absolute;
+    </section>
 
-  width: 4px;
-  height: 4px;
 
-  background: var(--acid);
+    <!-- ================================
+         MUSIC ARCHIVE
+    ================================= -->
 
-  border-radius: 50%;
+    <section
+      class="music panel"
+      id="sound">
 
-  top: 50%;
-  left: 50%;
+      <div class="section-heading">
 
-  transform: translate(-50%, -50%);
+        <span class="section-label">
+          SOUND / 01—08
+        </span>
 
-}
+        <span class="section-note">
+          NEWEST → OLDEST
+        </span>
 
+      </div>
 
-.cursor-hover {
 
-  width: 48px;
-  height: 48px;
+      <!-- 2025 -->
 
-  background: rgba(184, 255, 57, 0.08);
+      <div class="year-group">
 
-  border-color: var(--pink);
+        <div class="year">
+          2025
+        </div>
 
-}
+        <div class="track-grid">
 
+          <button
+            class="track"
+            data-track="0">
 
-/* -------------------------
-   GRAIN
-------------------------- */
+            <span class="track-number">
+              01
+            </span>
 
-body::before {
+            <span class="track-title">
+              COZY DIARIES
+            </span>
 
-  content: "";
+            <span class="track-sub">
+              CHAPTER 01
+            </span>
 
-  position: fixed;
+            <span class="track-year">
+              2025
+            </span>
 
-  inset: 0;
+            <span class="mini-play">
+              ▶
+            </span>
 
-  pointer-events: none;
+          </button>
 
-  opacity: 0.055;
 
-  z-index: 100;
+          <button
+            class="track"
+            data-track="1">
 
-  background-image:
+            <span class="track-number">
+              02
+            </span>
 
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+            <span class="track-title">
+              COZY DIARIES
+            </span>
 
-  mix-blend-mode: screen;
+            <span class="track-sub">
+              CHAPTER 02
+            </span>
 
-}
+            <span class="track-year">
+              2025
+            </span>
 
+            <span class="mini-play">
+              ▶
+            </span>
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+          </button>
 
+        </div>
 
-button {
-  font: inherit;
-}
+      </div>
 
 
-.mono {
-  font-family: "DM Mono", monospace;
-}
+      <!-- 2024 -->
 
+      <div class="year-group">
 
-/* -------------------------
-   NAV
-------------------------- */
+        <div class="year">
+          2024
+        </div>
 
-nav {
+        <div class="track-grid">
 
-  position: fixed;
+          <button
+            class="track"
+            data-track="2">
 
-  top: 0;
-  left: 0;
+            <span class="track-number">
+              03
+            </span>
 
-  width: 100%;
+            <span class="track-title">
+              SADDLE UP
+            </span>
 
-  padding: 24px 5vw;
+            <span class="track-year">
+              2024
+            </span>
 
-  display: flex;
+            <span class="mini-play">
+              ▶
+            </span>
 
-  justify-content: space-between;
+          </button>
 
-  align-items: center;
 
-  z-index: 50;
+          <button
+            class="track"
+            data-track="3">
 
-  mix-blend-mode: difference;
+            <span class="track-number">
+              04
+            </span>
 
-}
+            <span class="track-title">
+              OBSESSED
+            </span>
 
+            <span class="track-year">
+              2024
+            </span>
 
-.nav-logo {
+            <span class="mini-play">
+              ▶
+            </span>
 
-  font-family: "DM Mono", monospace;
+          </button>
 
-  font-size: 13px;
 
-  letter-spacing: 0.2em;
+          <button
+            class="track"
+            data-track="4">
 
-}
+            <span class="track-number">
+              05
+            </span>
 
+            <span class="track-title">
+              BREAKIN DOWN UR DOOR
+            </span>
 
-.nav-status {
+            <span class="track-year">
+              2024
+            </span>
 
-  font-family: "DM Mono", monospace;
+            <span class="mini-play">
+              ▶
+            </span>
 
-  font-size: 10px;
+          </button>
 
-  letter-spacing: 0.12em;
+        </div>
 
-  color: var(--acid);
+      </div>
 
-}
 
+      <!-- 2023 -->
 
-/* -------------------------
-   HERO
-------------------------- */
+      <div class="year-group">
 
-.hero {
+        <div class="year">
+          2023
+        </div>
 
-  min-height: 100vh;
+        <div class="track-grid">
 
-  display: flex;
+          <button
+            class="track"
+            data-track="5">
 
-  flex-direction: column;
+            <span class="track-number">
+              06
+            </span>
 
-  justify-content: center;
+            <span class="track-title">
+              ALICE IN WONDERLAND
+            </span>
 
-  padding: 120px 7vw 70px;
+            <span class="track-year">
+              2023
+            </span>
 
-  position: relative;
+            <span class="mini-play">
+              ▶
+            </span>
 
-  overflow: hidden;
+          </button>
 
-  background:
 
-    radial-gradient(
-      ellipse at 70% 35%,
-      rgba(29, 140, 255, 0.13),
-      transparent 25%
-    ),
+          <button
+            class="track"
+            data-track="6">
 
-    radial-gradient(
-      ellipse at 25% 65%,
-      rgba(23, 59, 34, 0.55),
-      transparent 35%
-    );
+            <span class="track-number">
+              07
+            </span>
 
-}
+            <span class="track-title">
+              SPECIAL
+            </span>
 
+            <span class="track-year">
+              2023
+            </span>
 
-.hero::after {
+            <span class="mini-play">
+              ▶
+            </span>
 
-  content: "";
+          </button>
 
-  position: absolute;
 
-  width: 55vw;
-  height: 55vw;
+          <button
+            class="track"
+            data-track="7">
 
-  top: -15vw;
-  right: -10vw;
+            <span class="track-number">
+              08
+            </span>
 
-  background:
+            <span class="track-title">
+              DELULU
+            </span>
 
-    radial-gradient(
-      circle,
-      rgba(184, 255, 57, 0.08),
-      rgba(29, 140, 255, 0.05) 35%,
-      transparent 70%
-    );
+            <span class="track-year">
+              2023
+            </span>
 
-  filter: blur(45px);
+            <span class="mini-play">
+              ▶
+            </span>
 
-  animation: dreamFloat 12s ease-in-out infinite alternate;
+          </button>
 
-  pointer-events: none;
+        </div>
 
-}
+      </div>
 
+    </section>
 
-.hero > * {
 
-  position: relative;
+    <!-- ================================
+         VIDEO + 11 REFERENCES
+         AFTER THE MAIN FOLIO
+    ================================= -->
 
-  z-index: 2;
+    <section
+      class="youtube-archive panel"
+      id="references">
 
-}
 
+      <div class="section-heading">
 
-@keyframes dreamFloat {
+        <span class="section-label">
+          03 / REFERENCES
+        </span>
 
-  from {
-    transform: translate3d(-20px, 10px, 0) scale(0.95);
-  }
+        <span class="section-note">
+          YOUTUBE / VISUAL + SOUND
+        </span>
 
-  to {
-    transform: translate3d(30px, -25px, 0) scale(1.08);
-  }
+      </div>
 
-}
 
+      <!-- FEATURED VIDEO -->
 
-.hero-small {
+      <div class="feature-video">
 
-  font-family: "DM Mono", monospace;
+        <div class="video-frame">
 
-  font-size: 11px;
+          <iframe
+            src="https://www.youtube.com/embed/ANBwTyObmjY?rel=0&modestbranding=1"
+            title="702 — Gotta Leave — Official Music Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
 
-  letter-spacing: 0.25em;
+        </div>
 
-  text-transform: uppercase;
 
-  color: var(--acid);
+        <div class="video-caption">
 
-  margin-bottom: 25px;
+          <div>
 
-  opacity: 0;
+            <span>
+              FEATURED REFERENCE / 01
+            </span>
 
-  animation: reveal 1s ease forwards 0.2s;
+            <strong>
+              702 — Gotta Leave
+            </strong>
 
-}
+          </div>
 
 
-.hero h1 {
+          <a
+            href="https://youtu.be/ANBwTyObmjY"
+            target="_blank"
+            rel="noopener">
 
-  font-size: clamp(4rem, 14vw, 12rem);
+            WATCH ON YOUTUBE ↗
 
-  line-height: 0.78;
+          </a>
 
-  letter-spacing: -0.085em;
+        </div>
 
-  font-weight: 600;
+      </div>
 
-  max-width: 1100px;
 
-  position: relative;
+      <!-- ================================
+           11 REFERENCES
+      ================================= -->
 
-  z-index: 2;
+      <div class="reference-list">
 
-  text-shadow:
-    0 0 35px rgba(238, 233, 223, 0.05);
 
-  opacity: 0;
+        <a
+          class="reference-row"
+          href="https://youtu.be/ANBwTyObmjY"
+          target="_blank"
+          rel="noopener">
 
-  animation: reveal 1s ease forwards 0.35s;
+          <span>01</span>
+          <strong>702 — Gotta Leave</strong>
+          <small>OFFICIAL MUSIC VIDEO</small>
+          <b>↗</b>
 
-}
+        </a>
 
 
-.hero h1 span {
-  display: block;
-}
+        <a
+          class="reference-row"
+          href="https://youtu.be/bp2DuEUjAkE"
+          target="_blank"
+          rel="noopener">
 
+          <span>02</span>
+          <strong>fiji babe</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
 
-.hero h1 .outline {
+        </a>
 
-  color: transparent;
 
-  -webkit-text-stroke:
-    1px rgba(238, 233, 223, 0.75);
+        <a
+          class="reference-row"
+          href="https://youtu.be/aals3JbR0Rc"
+          target="_blank"
+          rel="noopener">
 
-  text-shadow:
+          <span>03</span>
+          <strong>Girl Ultra — Mentirasmentiras</strong>
+          <small>FEAT. BUSCABULLA / OFFICIAL VIDEO</small>
+          <b>↗</b>
 
-    4px 0 rgba(29, 140, 255, 0.25),
+        </a>
 
-    -4px 0 rgba(159, 18, 57, 0.2);
 
-  animation: glitchColor 7s infinite;
+        <a
+          class="reference-row"
+          href="https://youtu.be/AhaISeg6zpE"
+          target="_blank"
+          rel="noopener">
 
-}
+          <span>04</span>
+          <strong>Julia Wolf — In My Room</strong>
+          <small>OFFICIAL MUSIC VIDEO</small>
+          <b>↗</b>
 
+        </a>
 
-@keyframes glitchColor {
 
-  0%,
-  85%,
-  100% {
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=Wii+Shop+Channel+Main+Theme"
+          target="_blank"
+          rel="noopener">
 
-    text-shadow:
-      4px 0 rgba(29, 140, 255, 0.25),
-      -4px 0 rgba(159, 18, 57, 0.2);
+          <span>05</span>
+          <strong>Wii Shop Channel</strong>
+          <small>MAIN THEME</small>
+          <b>↗</b>
 
-  }
+        </a>
 
-  88% {
 
-    text-shadow:
-      -7px 0 rgba(29, 140, 255, 0.5),
-      7px 0 rgba(184, 255, 57, 0.35);
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=fka+twigs+lights+on"
+          target="_blank"
+          rel="noopener">
 
-  }
+          <span>06</span>
+          <strong>FKA twigs — Lights On</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
 
-  91% {
+        </a>
 
-    text-shadow:
-      5px 0 rgba(159, 18, 57, 0.5),
-      -5px 0 rgba(29, 140, 255, 0.45);
 
-  }
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=SINNERELLA+Eye+Without+a+Face"
+          target="_blank"
+          rel="noopener">
 
-}
+          <span>07</span>
+          <strong>SINNERELLA — Eye Without a Face</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
 
+        </a>
 
-.hero-bottom {
 
-  margin-top: 70px;
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=The+Bootleg+Boy+No+Sleep"
+          target="_blank"
+          rel="noopener">
 
-  display: flex;
+          <span>08</span>
+          <strong>The Bootleg Boy — No Sleep</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
 
-  justify-content: space-between;
+        </a>
 
-  align-items: flex-end;
 
-  gap: 40px;
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=Scott+Pilgrim+Black+Sheep"
+          target="_blank"
+          rel="noopener">
 
-  max-width: 1000px;
+          <span>09</span>
+          <strong>Scott Pilgrim — Black Sheep</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
 
-  opacity: 0;
+        </a>
 
-  animation: reveal 1s ease forwards 0.65s;
 
-}
+        <a
+          class="reference-row"
+          href="https://youtu.be/qH1Instc7js"
+          target="_blank"
+          rel="noopener">
 
+          <span>10</span>
+          <strong>Clara La San — In This Darkness</strong>
+          <small>LYRIC VIDEO</small>
+          <b>↗</b>
 
-.hero-description {
+        </a>
 
-  max-width: 430px;
 
-  font-size: 15px;
+        <a
+          class="reference-row"
+          href="https://youtu.be/A4OYERIEpYA"
+          target="_blank"
+          rel="noopener">
 
-  line-height: 1.8;
+          <span>11</span>
+          <strong>Mannequin Pussy — I Don't Know You</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
 
-  color: #b5b5b5;
+        </a>
 
-}
+      </div>
 
+    </section>
 
-.enter-button {
 
-  border: 1px solid var(--text);
+    <!-- ================================
+         CONTACT
+    ================================= -->
 
-  padding: 17px 25px;
+    <section class="contact panel">
 
-  font-family: "DM Mono", monospace;
+      <span class="section-label">
+        NEXT / COLLABORATE
+      </span>
 
-  font-size: 11px;
+      <h2>
+        Looking for the<br>
+        <em>right sound.</em>
+      </h2>
 
-  letter-spacing: 0.12em;
+      <p>
+        Producer, musician, visual artist,
+        weird idea haver.
+      </p>
 
-  transition: 0.3s ease;
+      <a
+        class="contact-link"
+        href="mailto:hello@toskarose.com">
 
-  white-space: nowrap;
+        GET IN TOUCH ↗
 
-}
+      </a>
 
+    </section>
 
-.enter-button:hover {
+  </main>
 
-  background: var(--text);
 
-  color: var(--bg);
+  <!-- ================================
+       AUDIO PLAYER
+  ================================= -->
 
-}
+  <div
+    class="player"
+    id="player"
+    aria-live="polite">
 
+    <div class="player-meta">
 
-.scroll-indicator {
+      <span
+        class="player-index"
+        id="playerIndex">
+        01
+      </span>
 
-  position: absolute;
+      <div>
 
-  bottom: 30px;
+        <strong id="playerTitle">
+          COZY DIARIES
+        </strong>
 
-  right: 7vw;
+        <small id="playerYear">
+          2025 · CHAPTER 01
+        </small>
 
-  font-family: "DM Mono", monospace;
+      </div>
 
-  font-size: 9px;
+    </div>
 
-  color: var(--muted);
 
-  letter-spacing: 0.15em;
+    <button
+      class="play"
+      id="playBtn"
+      type="button">
 
-  writing-mode: vertical-rl;
+      PLAY
 
-}
+    </button>
 
 
-/* -------------------------
-   SECTIONS
-------------------------- */
+    <div
+      class="player-time"
+      id="playerTime">
 
-section {
+      00:00 / 00:00
 
-  padding: 140px 7vw;
+    </div>
 
-  border-top: 1px solid var(--line);
 
-}
+    <div class="progress">
 
+      <span id="progressBar"></span>
 
-.section-label {
+    </div>
 
-  font-family: "DM Mono", monospace;
 
-  font-size: 10px;
+    <audio id="audio"></audio>
 
-  color: var(--acid);
+  </div>
 
-  letter-spacing: 0.18em;
 
-  margin-bottom: 45px;
+  <script src="script.js"></script>
 
-}
-
-
-.section-title {
-
-  font-size: clamp(2.5rem, 6vw, 6rem);
-
-  line-height: 0.95;
-
-  letter-spacing: -0.05em;
-
-  max-width: 900px;
-
-  font-weight: 500;
-
-}
-
-
-/* -------------------------
-   SOUND
-------------------------- */
-
-.sound-grid {
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 80px;
-
-  margin-top: 80px;
-
-  align-items: start;
-
-}
-
-
-.sound-copy {
-
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-
-  line-height: 1.65;
-
-  color: #c7c7c7;
-
-}
-
-
-.genres {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 10px;
-
-}
-
-
-.genre {
-
-  border:
-    1px solid rgba(184, 255, 57, 0.22);
-
-  padding: 13px 18px;
-
-  font-family: "DM Mono", monospace;
-
-  font-size: 10px;
-
-  letter-spacing: 0.08em;
-
-  color: #bfc6bb;
-
-  background:
-    rgba(184, 255, 57, 0.025);
-
-  transition: 0.3s ease;
-
-}
-
-
-.genre:hover {
-
-  border-color: var(--acid);
-
-  color: var(--acid);
-
-  transform:
-    translateY(-4px)
-    rotate(-1deg);
-
-  box-shadow:
-    0 0 25px rgba(184, 255, 57, 0.08);
-
-}
-
-
-/* -------------------------
-   PLAYER
-------------------------- */
-
-.reference-player {
-
-  margin-top: 70px;
-
-  border:
-    1px solid var(--line);
-
-  background:
-    rgba(8, 10, 8, 0.7);
-
-}
-
-
-.player-top {
-
-  padding: 16px 20px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-  border-bottom:
-    1px solid var(--line);
-
-}
-
-
-.player-label,
-.player-status {
-
-  font-family: "DM Mono", monospace;
-
-  font-size: 9px;
-
-  letter-spacing: 0.14em;
-
-}
-
-
-.player-label {
-  color: var(--acid);
-}
-
-
-.player-status {
-  color: var(--muted);
-}
-
-
-.player-screen {
-
-  width: 100%;
-
-  aspect-ratio: 16 / 9;
-
-  position: relative;
-
-  background: #020302;
-
-}
-
-
-.player-placeholder {
-
-  position: absolute;
-
-  inset: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  font-family: "DM Mono", monospace;
-
-  font-size: 10px;
-
-  letter-spacing: 0.15em;
-
-  color: #555;
-
-  z-index: 1;
-
-}
-
-
-#youtube-player {
-
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-
-  height: 100%;
-
-  border: 0;
-
-  opacity: 0;
-
-  transition: opacity 0.5s ease;
-
-}
-
-
-#youtube-player.visible {
-  opacity: 1;
-}
-
-
-/* -------------------------
-   REFERENCES
-------------------------- */
-
-.references {
-
-  margin-top: 0;
-
-  border-top:
-    1px solid var(--line);
-
-}
-
-
-.track {
-
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns: 60px 1fr auto;
-
-  align-items: center;
-
-  gap: 25px;
-
-  padding: 28px 8px;
-
-  border: 0;
-
-  border-bottom:
-    1px solid var(--line);
-
-  background: transparent;
-
-  color: var(--text);
-
-  text-align: left;
-
-  cursor: none;
-
-  position: relative;
-
-  transition:
-    padding 0.35s ease,
-    background 0.35s ease;
-
-}
-
-
-.track:hover,
-.track.active {
-
-  padding-left: 25px;
-
-  padding-right: 25px;
-
-  background:
-
-    linear-gradient(
-      90deg,
-      rgba(23, 59, 34, 0.18),
-      rgba(29, 140, 255, 0.05),
-      transparent
-    );
-
-}
-
-
-.track-number {
-
-  font-family: "DM Mono", monospace;
-
-  font-size: 10px;
-
-  color: #555;
-
-}
-
-
-.track-name {
-
-  font-size: clamp(1rem, 2vw, 1.35rem);
-
-  font-weight: 400;
-
-}
-
-
-.track-artist {
-
-  font-size: 11px;
-
-  color: var(--muted);
-
-  margin-top: 5px;
-
-  font-family: "DM Mono", monospace;
-
-}
-
-
-.listen {
-
-  font-family: "DM Mono", monospace;
-
-  font-size: 9px;
-
-  letter-spacing: 0.12em;
-
-  color: var(--acid);
-
-  border:
-    1px solid rgba(184, 255, 57, 0.25);
-
-  padding: 10px 14px;
-
-  transition: 0.3s ease;
-
-}
-
-
-.track:hover .listen,
-.track.active .listen {
-
-  border-color: var(--acid);
-
-  background: var(--acid);
-
-  color: #050605;
-
-  box-shadow:
-    0 0 25px rgba(184, 255, 57, 0.15);
-
-}
-
-
-/* -------------------------
-   VISION
-------------------------- */
-
-.vision {
-
-  background:
-
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(159, 18, 57, 0.12),
-      transparent 30%
-    ),
-
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(23, 59, 34, 0.25),
-      transparent 35%
-    ),
-
-    #070807;
-
-  position: relative;
-
-  overflow: hidden;
-
-}
-
-
-.vision-text {
-
-  max-width: 850px;
-
-  margin-top: 70px;
-
-  font-size: clamp(1.5rem, 3vw, 2.7rem);
-
-  line-height: 1.5;
-
-  letter-spacing: -0.025em;
-
-}
-
-
-.highlight {
-
-  color: var(--pink);
-
-  text-shadow:
-    0 0 25px rgba(242, 184, 216, 0.15);
-
-}
-
-
-/* -------------------------
-   COLLAB
-------------------------- */
-
-.collab-grid {
-
-  margin-top: 80px;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 40px;
-
-}
-
-
-.collab-card {
-
-  border:
-    1px solid var(--line);
-
-  padding: 40px;
-
-  min-height: 250px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: space-between;
-
-  transition: 0.3s ease;
-
-}
-
-
-.collab-card:hover {
-
-  border-color: #555;
-
-  transform: translateY(-5px);
-
-}
-
-
-.collab-card h3 {
-
-  font-size: 24px;
-
-  font-weight: 400;
-
-}
-
-
-.collab-card p {
-
-  color: var(--muted);
-
-  line-height: 1.7;
-
-  font-size: 14px;
-
-  max-width: 450px;
-
-}
-
-
-/* -------------------------
-   CONTACT
-------------------------- */
-
-.contact {
-
-  min-height: 80vh;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  background:
-
-    radial-gradient(
-      circle at 70% 60%,
-      rgba(29, 140, 255, 0.08),
-      transparent 30%
-    ),
-
-    var(--bg);
-
-}
-
-
-.contact-title {
-
-  font-size: clamp(4rem, 12vw, 11rem);
-
-  line-height: 0.8;
-
-  letter-spacing: -0.075em;
-
-  margin-bottom: 80px;
-
-}
-
-
-.contact-links {
-
-  display: flex;
-
-  gap: 15px;
-
-  flex-wrap: wrap;
-
-}
-
-
-.contact-link {
-
-  border:
-    1px solid #444;
-
-  padding: 17px 25px;
-
-  font-family: "DM Mono", monospace;
-
-  font-size: 10px;
-
-  letter-spacing: 0.1em;
-
-  transition: 0.3s ease;
-
-}
-
-
-.contact-link:hover {
-
-  background: var(--acid);
-
-  color: #000;
-
-  border-color: var(--acid);
-
-}
-
-
-/* -------------------------
-   FOOTER
-------------------------- */
-
-footer {
-
-  border-top:
-    1px solid var(--line);
-
-  padding: 25px 7vw;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  font-family: "DM Mono", monospace;
-
-  font-size: 9px;
-
-  color: #555;
-
-  letter-spacing: 0.1em;
-
-}
-
-
-/* -------------------------
-   ANIMATION
-------------------------- */
-
-@keyframes reveal {
-
-  from {
-
-    opacity: 0;
-
-    transform:
-      translateY(30px);
-
-  }
-
-  to {
-
-    opacity: 1;
-
-    transform:
-      translateY(0);
-
-  }
-
-}
-
-
-/* -------------------------
-   MOBILE
-------------------------- */
-
-@media (max-width: 700px) {
-
-  body {
-    cursor: auto;
-  }
-
-  .cursor {
-    display: none;
-  }
-
-
-  nav {
-
-    padding:
-      20px 5vw;
-
-  }
-
-
-  .nav-status {
-    display: none;
-  }
-
-
-  .hero {
-
-    padding-left: 5vw;
-
-    padding-right: 5vw;
-
-  }
-
-
-  .hero h1 {
-
-    font-size:
-      clamp(4rem, 20vw, 8rem);
-
-  }
-
-
-  .hero-bottom {
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    margin-top: 55px;
-
-  }
-
-
-  .scroll-indicator {
-    display: none;
-  }
-
-
-  section {
-
-    padding:
-      100px 5vw;
-
-  }
-
-
-  .sound-grid,
-  .collab-grid {
-
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-
-  }
-
-
-  .player-top {
-
-    flex-direction: column;
-
-    gap: 8px;
-
-  }
-
-
-  .track {
-
-    grid-template-columns:
-      35px 1fr;
-
-    gap: 12px;
-
-  }
-
-
-  .listen {
-
-    grid-column: 2;
-
-    justify-self: start;
-
-  }
-
-
-  .collab-card {
-
-    min-height: 220px;
-
-    padding: 30px;
-
-  }
-
-
-  .contact-title {
-
-    font-size: 22vw;
-
-  }
-
-
-  footer {
-
-    padding:
-      20px 5vw;
-
-    flex-direction: column;
-
-    gap: 10px;
-
-  }
-
-}
-.hero h1 {
-  font-family: "Digibop", sans-serif !important;
-}
-
-.section-title {
-  font-family: "Core", sans-serif !important;
-}
-
-.mono {
-  font-family: "Fayte", sans-serif !important;
-}
+</body>
+</html>
+ 
