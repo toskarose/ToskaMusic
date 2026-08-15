@@ -397,7 +397,343 @@
 
     </section>
 
+/* ================================
+   REFERENCE VIDEO PLAYER
+================================ */
 
+.reference-player {
+
+  width: 100%;
+
+  margin-top: 70px;
+
+  margin-bottom: 90px;
+
+}
+
+
+/* VIDEO */
+
+.reference-player-screen {
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #050505;
+
+  border: 1px solid var(--line);
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+
+.reference-player-screen iframe {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+
+}
+
+
+/* PLAYER INFORMATION */
+
+.reference-player-info {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+
+.reference-player-title {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 22px;
+
+}
+
+
+.reference-player-title span {
+
+  font:
+    9px "DM Mono",
+    monospace;
+
+  letter-spacing: .1em;
+
+  color: var(--muted);
+
+}
+
+
+.reference-player-title strong {
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  letter-spacing: -.02em;
+
+}
+
+
+.reference-player-info > a {
+
+  color: var(--acid);
+
+  font:
+    9px "DM Mono",
+    monospace;
+
+  letter-spacing: .1em;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+}
+
+
+.reference-player-info > a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+/* ================================
+   REFERENCE CARDS
+================================ */
+
+.reference-list {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 16px;
+
+  border: 0;
+
+}
+
+
+.reference-row {
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 260px;
+
+  padding: 0;
+
+  border: 1px solid var(--line);
+
+  background: rgba(5,6,5,.45);
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    border-color .3s ease,
+    transform .3s ease,
+    background .3s ease;
+
+}
+
+
+.reference-row:hover {
+
+  border-color:
+    rgba(184,255,57,.4);
+
+  background:
+    rgba(216,155,191,.04);
+
+  transform:
+    translateY(-3px);
+
+}
+
+
+/*
+   IMAGE AREA
+
+   If you want the photos you took
+   to appear on these cards, add:
+
+   <div class="reference-image">
+     <img src="assets/your-image.jpg">
+   </div>
+
+*/
+
+
+.reference-image {
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+}
+
+
+.reference-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform .5s ease;
+
+}
+
+
+.reference-row:hover
+.reference-image img {
+
+  transform:
+    scale(1.04);
+
+}
+
+
+.reference-row > span {
+
+  padding:
+    20px 18px 0;
+
+  font:
+    9px "DM Mono",
+    monospace;
+
+  color: var(--muted);
+
+}
+
+
+.reference-row strong {
+
+  padding:
+    12px 18px 0;
+
+  font-size:
+    16px;
+
+  font-weight:
+    500;
+
+  line-height:
+    1.15;
+
+}
+
+
+.reference-row small {
+
+  padding:
+    12px 18px 20px;
+
+  font:
+    9px "DM Mono",
+    monospace;
+
+  letter-spacing:
+    .08em;
+
+  color:
+    var(--muted);
+
+}
+
+
+.reference-row b {
+
+  display:
+    none;
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+
+  .reference-list {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .reference-list {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .reference-player-info {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+  }
+
+
+  .reference-player-title {
+
+    flex-direction:
+      column;
+
+    gap:
+      8px;
+
+  }
+
+}
     <!-- ================================
          VIDEO + 11 REFERENCES
          AFTER THE MAIN FOLIO
