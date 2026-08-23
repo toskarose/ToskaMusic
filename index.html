@@ -1,540 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
   <title>TOSKAROSE — Producer Wanted</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- =====================================================
-       FOREST ATMOSPHERE
-  ====================================================== -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
 
-  <div class="forest-bg">
-
-    <div class="fog fog-1"></div>
-    <div class="fog fog-2"></div>
-
-    <div class="trees trees-back"></div>
-    <div class="trees trees-mid"></div>
-    <div class="trees trees-front"></div>
-
-    <div class="forest-glow"></div>
-
-  </div>
+  <div class="forest forest-pink" aria-hidden="true"></div>
+  <div class="forest forest-blue" aria-hidden="true"></div>
+  <div class="forest-vignette" aria-hidden="true"></div>
 
 
-  <!-- =====================================================
-       NAVIGATION
-  ====================================================== -->
+  <!-- ================================
+       HEADER
+  ================================= -->
 
-  <header class="site-header">
+  <header class="nav">
 
-    <a href="#" class="logo cursor-hover">
-      TOSKAROSE
+    <a
+      class="wordmark rose-wordmark"
+      href="#top"
+      aria-label="TOSKAROSE">
+
+      <span>T</span>
+      <span>O</span>
+      <span>S</span>
+      <span>K</span>
+      <span>A</span>
+      <span>R</span>
+      <span>O</span>
+      <span>S</span>
+      <span>E</span>
+
     </a>
 
-    <nav class="nav">
+    <span class="nav-status">
+      PRODUCER WANTED
+    </span>
 
-      <a href="#about" class="cursor-hover">ABOUT</a>
-      <a href="#sound" class="cursor-hover">SOUND</a>
-      <a href="#references" class="cursor-hover">REFERENCES</a>
-      <a href="#contact" class="cursor-hover">CONTACT</a>
+    <button
+      class="sound-toggle"
+      type="button"
+      aria-label="Toggle interface sound">
 
-    </nav>
+      SOUND <span>ON</span>
+
+    </button>
 
   </header>
 
 
-  <!-- =====================================================
-       HERO
-  ====================================================== -->
+  <!-- ================================
+       MAIN FOLIO
+  ================================= -->
 
-  <main>
+  <main id="top">
+
+
+    <!-- HERO -->
 
     <section class="hero">
 
-      <div class="hero-meta">
-        <span>01 / 05</span>
-        <span>ATLANTA, GA</span>
-      </div>
-
-
-      <div class="hero-content">
+      <div class="hero-copy">
 
         <p class="eyebrow">
-          PRODUCER WANTED
+          01 / OPEN CREATIVE COLLABORATION
         </p>
 
         <h1>
-          TOSKA<br>
-          <span>ROSE</span>
+          Enter<br>
+          <em>the forest.</em>
         </h1>
 
-        <p class="hero-description">
-          Looking for producers, artists, musicians,
-          and creative collaborators interested in
-          building something strange, emotional,
-          cinematic, and alive.
+        <p class="hero-sub">
+          Music, visual worlds &amp; strange little things.
         </p>
 
-        <a href="#sound" class="hero-button cursor-hover">
-          ENTER THE SOUND →
-        </a>
+        <button
+          class="enter-btn"
+          type="button"
+          id="enterBtn">
+
+          <span>ENTER FOLIO</span>
+          <span class="enter-arrow">↘</span>
+
+        </button>
 
       </div>
 
 
-      <div class="hero-bottom">
+      <div
+        class="moth-wrap"
+        aria-hidden="true">
 
-        <span>SELECTED WORKS</span>
+        <img
+          src="assets/moth.png"
+          alt="">
 
-        <span class="scroll-indicator">
-          ↓ SCROLL
+      </div>
+
+
+      <div class="scroll-note">
+        SCROLL TO DISCOVER
+        <span>↓</span>
+      </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="intro panel">
+
+      <div class="section-label">
+        TOSKAROSE / ARCHIVE
+      </div>
+
+      <div>
+
+        <p class="big-copy">
+          A living archive of sound, references,
+          experiments and collaborative ideas.
+        </p>
+
+        <p class="small-copy">
+          Start with the newest work. Move backward
+          through the years. Click a piece to reveal
+          its name and year, then press play to listen.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         MUSIC ARCHIVE
+    ================================= -->
+
+    <section
+      class="music panel"
+      id="sound">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          SOUND / 01—08
+        </span>
+
+        <span class="section-note">
+          NEWEST → OLDEST
         </span>
 
       </div>
 
-    </section>
 
+      <!-- 2025 -->
 
-    <!-- =====================================================
-         ABOUT
-    ====================================================== -->
+      <div class="year-group">
 
-    <section class="section about" id="about">
-
-      <div class="section-number">
-        02
-      </div>
-
-      <div class="section-content">
-
-        <p class="section-label">
-          ABOUT / TOSKAROSE
-        </p>
-
-        <h2>
-          MUSIC AS<br>
-          <span>WORLD BUILDING.</span>
-        </h2>
-
-        <div class="about-grid">
-
-          <p>
-            TOSKAROSE is an evolving creative project
-            exploring sound, visuals, emotion, memory,
-            and atmosphere.
-          </p>
-
-          <p>
-            The goal isn't simply to make songs.
-            It's to create environments that people
-            can step inside.
-          </p>
-
+        <div class="year">
+          2025
         </div>
 
-      </div>
+        <div class="track-grid">
 
-    </section>
+          <button
+            class="track"
+            data-track="0">
 
-
-    <!-- =====================================================
-         VIDEO / SOUND
-    ====================================================== -->
-
-    <section class="section sound-section" id="sound">
-
-      <div class="section-number">
-        03
-      </div>
-
-      <div class="section-content">
-
-        <p class="section-label">
-          03 / SOUND
-        </p>
-
-        <h2>
-          WATCH /<br>
-          <span>LISTEN.</span>
-        </h2>
-
-
-        <!-- VIDEO PLAYER -->
-
-        <div class="video-wrapper">
-
-          <div class="video-topline">
-
-            <span>
-              TOSKAROSE — SELECTED VISUAL
+            <span class="track-number">
+              01
             </span>
 
-            <span>
+            <span class="track-title">
+              COZY DIARIES
+            </span>
+
+            <span class="track-sub">
+              CHAPTER 01
+            </span>
+
+            <span class="track-year">
               2025
             </span>
 
-          </div>
-
-
-          <div class="video-frame">
-
-            <!--
-              Replace the VIDEO_ID below with your YouTube
-              video's ID.
-
-              Example:
-              https://www.youtube.com/watch?v=ABC123
-
-              becomes:
-              https://www.youtube.com/embed/ABC123
-            -->
-
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID"
-              title="TOSKAROSE Video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-
-          </div>
-
-
-          <div class="video-caption">
-
-            <span>
-              VISUAL / AUDIO
+            <span class="mini-play">
+              ▶
             </span>
 
-            <span>
-              TOSKAROSE
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
+          </button>
 
 
-    <!-- =====================================================
-         REFERENCES
-    ====================================================== -->
+          <button
+            class="track"
+            data-track="1">
 
-    <section class="section references" id="references">
-
-      <div class="section-number">
-        04
-      </div>
-
-      <div class="section-content">
-
-        <p class="section-label">
-          04 / REFERENCES
-        </p>
-
-        <h2>
-          SONIC<br>
-          <span>REFERENCES.</span>
-        </h2>
-
-
-        <div class="reference-list">
-
-
-          <a href="#" class="reference cursor-hover">
-
-            <div class="reference-number">
-              01
-            </div>
-
-            <div class="reference-info">
-
-              <h3>
-                Reference One
-              </h3>
-
-              <p>
-                2025 / SOUND
-              </p>
-
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
-
-
-          <a href="#" class="reference cursor-hover">
-
-            <div class="reference-number">
+            <span class="track-number">
               02
-            </div>
+            </span>
 
-            <div class="reference-info">
+            <span class="track-title">
+              COZY DIARIES
+            </span>
 
-              <h3>
-                Reference Two
-              </h3>
+            <span class="track-sub">
+              CHAPTER 02
+            </span>
 
-              <p>
-                2025 / SOUND
-              </p>
+            <span class="track-year">
+              2025
+            </span>
 
-            </div>
+            <span class="mini-play">
+              ▶
+            </span>
 
-            <div class="reference-arrow">
-              ↗
-            </div>
+          </button>
 
-          </a>
+        </div>
+
+      </div>
 
 
-          <a href="#" class="reference cursor-hover">
+      <!-- 2024 -->
 
-            <div class="reference-number">
+      <div class="year-group">
+
+        <div class="year">
+          2024
+        </div>
+
+        <div class="track-grid">
+
+          <button
+            class="track"
+            data-track="2">
+
+            <span class="track-number">
               03
-            </div>
+            </span>
 
-            <div class="reference-info">
+            <span class="track-title">
+              SADDLE UP
+            </span>
 
-              <h3>
-                Reference Three
-              </h3>
+            <span class="track-year">
+              2024
+            </span>
 
-              <p>
-                2024 / SOUND
-              </p>
+            <span class="mini-play">
+              ▶
+            </span>
 
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
+          </button>
 
 
-          <a href="#" class="reference cursor-hover">
+          <button
+            class="track"
+            data-track="3">
 
-            <div class="reference-number">
+            <span class="track-number">
               04
-            </div>
+            </span>
 
-            <div class="reference-info">
+            <span class="track-title">
+              OBSESSED
+            </span>
 
-              <h3>
-                Reference Four
-              </h3>
+            <span class="track-year">
+              2024
+            </span>
 
-              <p>
-                2024 / SOUND
-              </p>
+            <span class="mini-play">
+              ▶
+            </span>
 
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
+          </button>
 
 
-          <a href="#" class="reference cursor-hover">
+          <button
+            class="track"
+            data-track="4">
 
-            <div class="reference-number">
+            <span class="track-number">
               05
-            </div>
+            </span>
 
-            <div class="reference-info">
+            <span class="track-title">
+              BREAKIN DOWN UR DOOR
+            </span>
 
-              <h3>
-                Reference Five
-              </h3>
+            <span class="track-year">
+              2024
+            </span>
 
-              <p>
-                2024 / SOUND
-              </p>
+            <span class="mini-play">
+              ▶
+            </span>
 
-            </div>
+          </button>
 
-            <div class="reference-arrow">
-              ↗
-            </div>
+        </div>
 
-          </a>
+      </div>
 
 
-          <a href="#" class="reference cursor-hover">
+      <!-- 2023 -->
 
-            <div class="reference-number">
+      <div class="year-group">
+
+        <div class="year">
+          2023
+        </div>
+
+        <div class="track-grid">
+
+          <button
+            class="track"
+            data-track="5">
+
+            <span class="track-number">
               06
-            </div>
+            </span>
 
-            <div class="reference-info">
+            <span class="track-title">
+              ALICE IN WONDERLAND
+            </span>
 
-              <h3>
-                Reference Six
-              </h3>
+            <span class="track-year">
+              2023
+            </span>
 
-              <p>
-                2024 / SOUND
-              </p>
+            <span class="mini-play">
+              ▶
+            </span>
 
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
+          </button>
 
 
-          <a href="#" class="reference cursor-hover">
+          <button
+            class="track"
+            data-track="6">
 
-            <div class="reference-number">
+            <span class="track-number">
               07
-            </div>
+            </span>
 
-            <div class="reference-info">
+            <span class="track-title">
+              SPECIAL
+            </span>
 
-              <h3>
-                Reference Seven
-              </h3>
+            <span class="track-year">
+              2023
+            </span>
 
-              <p>
-                2024 / SOUND
-              </p>
+            <span class="mini-play">
+              ▶
+            </span>
 
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
+          </button>
 
 
-          <a href="#" class="reference cursor-hover">
+          <button
+            class="track"
+            data-track="7">
 
-            <div class="reference-number">
+            <span class="track-number">
               08
-            </div>
+            </span>
 
-            <div class="reference-info">
+            <span class="track-title">
+              DELULU
+            </span>
 
-              <h3>
-                Reference Eight
-              </h3>
+            <span class="track-year">
+              2023
+            </span>
 
-              <p>
-                2024 / SOUND
-              </p>
+            <span class="mini-play">
+              ▶
+            </span>
 
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
-
-
-          <a href="#" class="reference cursor-hover">
-
-            <div class="reference-number">
-              09
-            </div>
-
-            <div class="reference-info">
-
-              <h3>
-                Reference Nine
-              </h3>
-
-              <p>
-                2023 / SOUND
-              </p>
-
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
-
-
-          <a href="#" class="reference cursor-hover">
-
-            <div class="reference-number">
-              10
-            </div>
-
-            <div class="reference-info">
-
-              <h3>
-                Reference Ten
-              </h3>
-
-              <p>
-                2023 / SOUND
-              </p>
-
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
-
-
-          <a href="#" class="reference cursor-hover">
-
-            <div class="reference-number">
-              11
-            </div>
-
-            <div class="reference-info">
-
-              <h3>
-                Reference Eleven
-              </h3>
-
-              <p>
-                2023 / SOUND
-              </p>
-
-            </div>
-
-            <div class="reference-arrow">
-              ↗
-            </div>
-
-          </a>
-
+          </button>
 
         </div>
 
@@ -543,61 +398,333 @@
     </section>
 
 
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
+    <!-- ================================
+         VIDEO + 11 REFERENCES
+         AFTER THE MAIN FOLIO
+    ================================= -->
 
-    <section class="section contact" id="contact">
+    <section
+      class="youtube-archive panel"
+      id="references">
 
-      <div class="section-number">
-        05
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          03 / REFERENCES
+        </span>
+
+        <span class="section-note">
+          YOUTUBE / VISUAL + SOUND
+        </span>
+
       </div>
 
-      <div class="section-content">
 
-        <p class="section-label">
-          05 / CONTACT
-        </p>
+      <!-- FEATURED VIDEO -->
 
-        <h2>
-          LET'S MAKE<br>
-          <span>SOMETHING.</span>
-        </h2>
+      <div class="feature-video">
 
-        <p class="contact-text">
-          Interested in collaborating?
-          Send a message.
-        </p>
+        <div class="video-frame">
+
+          <iframe
+            src="https://www.youtube.com/embed/ANBwTyObmjY?rel=0&modestbranding=1"
+            title="702 — Gotta Leave — Official Music Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+
+        <div class="video-caption">
+
+          <div>
+
+            <span>
+              FEATURED REFERENCE / 01
+            </span>
+
+            <strong>
+              702 — Gotta Leave
+            </strong>
+
+          </div>
+
+
+          <a
+            href="https://youtu.be/ANBwTyObmjY"
+            target="_blank"
+            rel="noopener">
+
+            WATCH ON YOUTUBE ↗
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================================
+           11 REFERENCES
+      ================================= -->
+
+      <div class="reference-list">
+
 
         <a
-          href="mailto:YOUR_EMAIL@example.com"
-          class="contact-link cursor-hover"
-        >
-          YOUR_EMAIL@example.com →
+          class="reference-row"
+          href="https://youtu.be/ANBwTyObmjY"
+          target="_blank"
+          rel="noopener">
+
+          <span>01</span>
+          <strong>702 — Gotta Leave</strong>
+          <small>OFFICIAL MUSIC VIDEO</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://youtu.be/bp2DuEUjAkE"
+          target="_blank"
+          rel="noopener">
+
+          <span>02</span>
+          <strong>fiji babe</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://youtu.be/aals3JbR0Rc"
+          target="_blank"
+          rel="noopener">
+
+          <span>03</span>
+          <strong>Girl Ultra — Mentirasmentiras</strong>
+          <small>FEAT. BUSCABULLA / OFFICIAL VIDEO</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://youtu.be/AhaISeg6zpE"
+          target="_blank"
+          rel="noopener">
+
+          <span>04</span>
+          <strong>Julia Wolf — In My Room</strong>
+          <small>OFFICIAL MUSIC VIDEO</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=Wii+Shop+Channel+Main+Theme"
+          target="_blank"
+          rel="noopener">
+
+          <span>05</span>
+          <strong>Wii Shop Channel</strong>
+          <small>MAIN THEME</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=fka+twigs+lights+on"
+          target="_blank"
+          rel="noopener">
+
+          <span>06</span>
+          <strong>FKA twigs — Lights On</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=SINNERELLA+Eye+Without+a+Face"
+          target="_blank"
+          rel="noopener">
+
+          <span>07</span>
+          <strong>SINNERELLA — Eye Without a Face</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=The+Bootleg+Boy+No+Sleep"
+          target="_blank"
+          rel="noopener">
+
+          <span>08</span>
+          <strong>The Bootleg Boy — No Sleep</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://www.youtube.com/results?search_query=Scott+Pilgrim+Black+Sheep"
+          target="_blank"
+          rel="noopener">
+
+          <span>09</span>
+          <strong>Scott Pilgrim — Black Sheep</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://youtu.be/qH1Instc7js"
+          target="_blank"
+          rel="noopener">
+
+          <span>10</span>
+          <strong>Clara La San — In This Darkness</strong>
+          <small>LYRIC VIDEO</small>
+          <b>↗</b>
+
+        </a>
+
+
+        <a
+          class="reference-row"
+          href="https://youtu.be/A4OYERIEpYA"
+          target="_blank"
+          rel="noopener">
+
+          <span>11</span>
+          <strong>Mannequin Pussy — I Don't Know You</strong>
+          <small>REFERENCE</small>
+          <b>↗</b>
+
         </a>
 
       </div>
+
+    </section>
+
+
+    <!-- ================================
+         CONTACT
+    ================================= -->
+
+    <section class="contact panel">
+
+      <span class="section-label">
+        NEXT / COLLABORATE
+      </span>
+
+      <h2>
+        Looking for the<br>
+        <em>right sound.</em>
+      </h2>
+
+      <p>
+        Producer, musician, visual artist,
+        weird idea haver.
+      </p>
+
+      <a
+        class="contact-link"
+        href="mailto:hello@toskarose.com">
+
+        GET IN TOUCH ↗
+
+      </a>
 
     </section>
 
   </main>
 
 
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
+  <!-- ================================
+       AUDIO PLAYER
+  ================================= -->
 
-  <footer>
+  <div
+    class="player"
+    id="player"
+    aria-live="polite">
 
-    <span>
-      © 2026 TOSKAROSE
-    </span>
+    <div class="player-meta">
 
-    <span>
-      BUILT IN THE DARK
-    </span>
+      <span
+        class="player-index"
+        id="playerIndex">
+        01
+      </span>
 
-  </footer>
+      <div>
+
+        <strong id="playerTitle">
+          COZY DIARIES
+        </strong>
+
+        <small id="playerYear">
+          2025 · CHAPTER 01
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="play"
+      id="playBtn"
+      type="button">
+
+      PLAY
+
+    </button>
+
+
+    <div
+      class="player-time"
+      id="playerTime">
+
+      00:00 / 00:00
+
+    </div>
+
+
+    <div class="progress">
+
+      <span id="progressBar"></span>
+
+    </div>
+
+
+    <audio id="audio"></audio>
+
+  </div>
 
 
   <script src="script.js"></script>
